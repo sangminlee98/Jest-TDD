@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1640009990721" clover="3.2.0">
-  <project timestamp="1640009990721" name="All files">
+<coverage generated="1640258178367" clover="3.2.0">
+  <project timestamp="1640258178367" name="All files">
     <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="add.js" path="/Users/soone/Desktop/공부/드림코딩 TDD/UNIT-BASIC/src/add.js">
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
