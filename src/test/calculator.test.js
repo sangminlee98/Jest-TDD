@@ -27,6 +27,12 @@ describe('calculator test', () => {
         expect(cal.value).toBe(4);
     })
     
+    it('add should throw an error if value is greater than 100', () => {
+        expect(()=> {
+            cal.add(101);
+        }).toThrow('Value can not be greater than 100');
+    }) // 에러를 테스트 할 때는 expect에 콜백함수로 에러를 던지는 코드를 작성 후 toThrow 메소드 사용
+
     it('subtract test', () => {
         cal.set(2);
         cal.subtract(1);
