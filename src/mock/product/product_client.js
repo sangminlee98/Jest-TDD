@@ -1,8 +1,7 @@
 class ProductClient {
-    fetchItems() {
-        return fetch('http://example.com/login/id+password').then((response) => {
-            response.json();
-        });
+    async fetchItems() {
+        const response = await fetch('http://example.com/login/id+password');
+        response.json();
     }
 }
 

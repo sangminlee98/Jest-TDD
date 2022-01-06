@@ -1,26 +1,25 @@
-const ProductService = require('../product_service_no_di');
 const ProductClient = require('../product_client');
+const ProductServiceND = require('../product_service_no_di');
 jest.mock('../product_client');
 
-
-describe('ProductService', () => {
-    const fetchItems = jest.fn(async () => [
-        {item: 'Milk', available: true},
-        {item: 'Banana', available: false},
+describe('product service test', () => {
+    const fetchItems = jest.fn(async() => [
+        {items: 'apple', available: true},
+        {items: 'banana', available: false},
     ]);
+    
     ProductClient.mockImplementation(() => {
         return {
             fetchItems,
-        }
-    })
-    let productService;
+        };
+    });
+    let productServiceND;
     beforeEach(() => {
-        productService = new ProductService();
+        productService = new ProductServiceND();
     });
 
-    it('should filter out only available items', async () => {
+    it('should filter out only available items', async() => {
         const items = await productService.fetchAvailableItems();
-        expect(items).toEqual([{item: 'Milk', available: true}]);
-        expect(items).toHaveLength(1);
+        expect(items).toEqual([{items: 'apple', available: true}]);
     })
 })

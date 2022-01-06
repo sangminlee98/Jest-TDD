@@ -1,5 +1,5 @@
 const ProductClient = require('./product_client');
-class ProductService {
+class ProductServiceND {
     constructor() {
         this.ProductClient = new ProductClient();
     }
@@ -11,4 +11,4 @@ class ProductService {
     }
 }
 
-module.exports = ProductService;
+module.exports = ProductServiceND;
